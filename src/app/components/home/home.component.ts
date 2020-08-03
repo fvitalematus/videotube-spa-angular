@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
     this.page_title = "Inicio";
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
