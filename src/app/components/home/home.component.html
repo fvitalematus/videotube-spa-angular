@@ -2,6 +2,49 @@
     <h1>{{page_title}}</h1>
     <hr>
 
+    <div class="card-columns">
+        <article class="card w-100" *ngFor="let video of videos">
+            <div class="card-header">
+                <h3>
+                    {{video.title}}
+                </h3>
+            </div>
+
+            <div class="card-body">
+                <!--MINIATURA-->
+                <div class="video-image w-100" *ngIf="video.url">
+                    <img src="{{getThumb(video.url)}}" class="w-100" />
+                </div>
+
+                <div class="video-image w-100" *ngIf="!video.url">
+                    <img src="assets/images/video-default.jpg" class="w-100" />
+                </div>
+
+                <!--BOTONES-->
+                <div class="video-buttons mt-3">
+                    <a href="#" class="btn btn-success mr-2">Leer</a>
+                    <a href="#" class="btn btn-light active mr-2">Editar</a>
+                    <a href="#" class="btn btn-danger mr-2">Borrar</a>
+                </div>
+            </div>
+
+        </article>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center align-items-center d-flex">
+            <li class="page-item">
+                <a class="page-link" [routerLink]="['/inicio', prev_page]">Anterior</a>
+            </li>
+            <li class="page-item" *ngFor="let num of number_pages">
+                <a class="page-link" [routerLink]="['/inicio', num]">{{num}}</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" [routerLink]="['/inicio', next_page]">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+
 </div>
 
 <div class="col-md-12 mt-3" *ngIf="!identity">

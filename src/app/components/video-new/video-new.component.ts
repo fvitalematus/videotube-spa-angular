@@ -38,7 +38,7 @@ export class VideoNewComponent implements OnInit {
       response => {
         if (response.status == 'success') {
           this.status = 'success';
-          //this._router.navigate(['/inicio']);
+          this._router.navigate(['/inicio']);
         } else {
           this.status = 'error';
         }
