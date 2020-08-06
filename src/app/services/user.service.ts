@@ -60,7 +60,7 @@ export class UserService {
         return this._http.put(this.url + 'user/edit', params, { headers: headers });
     }
 
-    getIdentity() {
+    getIdentity(): Observable<any> {
         let identity = JSON.parse(localStorage.getItem('identity'));
 
         if (identity && identity != 'undefined') {

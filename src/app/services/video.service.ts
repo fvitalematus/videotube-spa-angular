@@ -3,11 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Video } from '../models/video';
 import { global } from './global';
+import { User } from '../models/user';
 
 @Injectable()
 export class VideoService {
 
-    public url: string;
+    public url: string;   
 
     constructor(
         private _http: HttpClient
