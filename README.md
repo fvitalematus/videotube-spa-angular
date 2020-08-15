@@ -8,12 +8,14 @@
 
 Este repositorio incluye: Desarrollo de una Web App SPA con el framework Angular 10, con el objetivo de crear una aplicación VideoTube. Primero se realizará el backend con Symfony y luego el frontend con Angular.
 
--
--
--
--
--
-
+- Librerias NPM y Modelos de datos.
+- Maquetación Web, Componentes, RUTAS y Páginas.
+- Registro de Usuarios.
+- Login de Usuarios y Autenticación en el Front.
+- Ajustes y Edición de datos de Usuario.
+- Crear nuevos videos en la aplicación.
+- Videos, Interacción con YouTube y Paginación.
+- Configuraciones Finales y Upgrades.
 
 JSON de configuración
 
